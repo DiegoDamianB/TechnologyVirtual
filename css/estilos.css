@@ -1,0 +1,21 @@
+#titulo1 {
+    color: #1696bd;
+    font-size: 40px;
+    text-align: center;
+}
+
+#titulo2 {
+    color: #1696bd;
+    font-size: 40px;
+    text-align: left;
+}
+
+#titulo3 {
+    color: #1696bd;
+    font-size: 40px;
+    text-align: left;
+}
+
+.contenedor-logo, .menu-principal{
+	width:100%;
+}
