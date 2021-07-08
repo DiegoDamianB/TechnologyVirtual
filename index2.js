@@ -1,4 +1,5 @@
-//Validamos que los campos del formulario no esten vacios
+/*****REGISTRARSE*****/
+//Validamos que los campos del Registro no esten vacios
 //Creamos un objeto para validar todos los campos
 var camposRegistro = {
     nombre: '',
@@ -13,7 +14,7 @@ function leerTexto(evento) {
 }
 
 
-//Obtenemos la referencia de todos los elementos del formulario que deseamos validar
+//Obtenemos la referencia de todos los elementos del Registro que deseamos validar
 const nombre = document.getElementById('nombres');
 const correo = document.querySelector('#correo');
 const user = document.getElementById('user');
@@ -24,3 +25,28 @@ nombre.addEventListener('input', leerTexto);
 correo.addEventListener('input', leerTexto);
 user.addEventListener('input', leerTexto);
 passw.addEventListener('input', leerTexto);
+
+//******Fin de REGISTRARSE******/
+
+/***INICIAR SESION****/
+
+//Validamos que los campos de Iniciar Sesion no esten vacios
+//Creamos un objeto para validar todos los campos
+var camposIniciarSesion = {
+    email: '',
+    pw: ''
+}
+
+function leerTexto(evento) {
+    camposIniciarSesion[evento.target.id] = evento.target.value;
+    console.table(camposIniciarSesion);
+}
+
+
+//Obtenemos la referencia de todos los elementos de Iniciar Sesion que deseamos validar
+const mail = document.querySelector('#email');
+const pw = document.querySelector('#pw');
+
+//Ahora estar pendiente de los eventos sobre los cuales queremos realizar una accion una vez que ocurran
+mail.addEventListener('input', leerTexto);
+pw.addEventListener('input', leerTexto);
