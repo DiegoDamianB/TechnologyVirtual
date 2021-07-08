@@ -26,7 +26,7 @@ function mostrarError(mensaje) {
     //Quitamos el mensaje de error luego de 5 segundos
     setTimeout(function() {
         error.remove();
-    }, 5000);
+    }, 3000);
 }
 
 function validarRegistro(evento) {
@@ -55,7 +55,7 @@ correo.addEventListener('input', leerTexto);
 user.addEventListener('input', leerTexto);
 passw.addEventListener('input', leerTexto);
 
-//Ahora estamos pendiente del evento submit del INICIAR SESION
+//Ahora estamos pendiente del evento submit de REGISTRO
 registro.addEventListener('submit', validarRegistro);
 
 
@@ -88,7 +88,7 @@ function mostrarMensajeError(mensaje) {
     //Quitamos el mensaje de error luego de 5 segundos
     setTimeout(function() {
         bloqueError.remove();
-    }, 5000);
+    }, 3000);
 }
 
 function validarLogin(evento) {
