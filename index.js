@@ -14,7 +14,7 @@ console.log(botonEntrar);
 botonEntrar.addEventListener('click', function(miEvento) {
     console.log(miEvento);
     miEvento.preventDefault();
-    console.log('Iniciando sesión.');
+    console.log('Iniciando sesión');
 })
 
 const botonRegistrarse = document.querySelector('.Registrarse');
