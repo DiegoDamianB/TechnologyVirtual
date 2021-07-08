@@ -9,7 +9,7 @@ window.addEventListener('scroll', function() {
 });
 
 //Busco el elemento cuya clase es .Entrar
-const botonEntrar = document.querySelector('.Entrar');
+/*const botonEntrar = document.querySelector('.Entrar');
 console.log(botonEntrar);
 botonEntrar.addEventListener('click', function(miEvento) {
     console.log(miEvento);
@@ -24,7 +24,7 @@ botonRegistrarse.addEventListener('click', function(tuEvento) {
     console.log(tuEvento);
     tuEvento.preventDefault(); //Prevenir que haga accion por defecto, en caso tenga una accion por defecto
     console.log('Enviando datos de registro.');
-});
+});*/
 
 //Obtener el contenido de un elemento (REGISTRARSE)
 //guardamos la referencia del elemento con el que queremos trabajar
