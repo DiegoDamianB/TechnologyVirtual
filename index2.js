@@ -29,16 +29,32 @@ function mostrarError(mensaje) {
     }, 3000);
 }
 
+function mostrarMensaje(mensaje) {
+    //Creo el elemento donde se coloca el mensaje de error para que el usuario lo vea
+    const messageOk = document.createElement('p');
+    //Agrego el mensaje en el elemento
+    messageOk.textContent = mensaje;
+    //Agregamos una clase para luego darle estilo desde nuestro css
+    messageOk.classList.add('mensajeOkSegundo');
+    //Agrego el bloque a mi html al final del formulario
+    registro.appendChild(messageOk);
+
+    //Quitamos el mensaje de error luego de 5 segundos
+    setTimeout(function() {
+        messageOk.remove();
+    }, 3000);
+}
+
 function validarRegistro(evento) {
     evento.preventDefault();
     //Accedemos a los valores del objeto con camposIniciarSesion.email, camposIniciarSesion.pw
     //Validamos que los campos no esten en blanco
     if (camposRegistro.nombre === '' || camposRegistro.correo === '' || camposRegistro.user === '' || camposRegistro.passw === '') {
-        mostrarError('Todos los campos son obligatorios');
+        mostrarError('*Todos los campos son obligatorios');
         //Luego de esto no deberia continuar, entonces salgo de la funcion
         return;
     }
-    console.log('Enviando registro');
+    mostrarMensaje('Enviando registro');
 }
 
 
@@ -91,16 +107,32 @@ function mostrarMensajeError(mensaje) {
     }, 3000);
 }
 
+function mostrarMensajeOk(mensaje) {
+    //Creo el elemento donde se coloca el mensaje para que el usuario lo vea
+    const bloqueOk = document.createElement('p');
+    //Agrego el mensaje en el elemento
+    bloqueOk.textContent = mensaje;
+    //Agregamos una clase para luego darle estilo desde nuestro css
+    bloqueOk.classList.add('mensajeOk');
+    //Agrego el bloque a mi html al final del formulario
+    login.appendChild(bloqueOk);
+
+    //Quitamos el mensaje de error luego de 5 segundos
+    setTimeout(function() {
+        bloqueOk.remove();
+    }, 3000);
+}
+
 function validarLogin(evento) {
     evento.preventDefault();
     //Accedemos a los valores del objeto con camposIniciarSesion.email, camposIniciarSesion.pw
     //Validamos que los campos no esten en blanco
     if (camposIniciarSesion.email === '' || camposIniciarSesion.pw === '') {
-        mostrarMensajeError('Todos los campos son obligatorios');
+        mostrarMensajeError('*Todos los campos son obligatorios');
         //Luego de esto no deberia continuar, entonces salgo de la funcion
         return;
     }
-    console.log('Iniciando sesión');
+    mostrarMensajeOk('Iniciando sesión.');
 }
 
 //Obtenemos la referencia de todos los elementos de Iniciar Sesion que deseamos validar

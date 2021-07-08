@@ -321,6 +321,27 @@ main {
     }
 }
 
+.mensajeError {
+    font-weight: bold;
+    color: red;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.mensajeOk {
+    font-weight: bold;
+    color: rgb(36, 88, 167);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.mensajeErrorSegundo {
+    font-weight: bold;
+    color: red;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 
 /**********************Fin de Formulario**************/
 
