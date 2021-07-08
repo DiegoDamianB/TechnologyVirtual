@@ -28,7 +28,6 @@ botonRegistrarse.addEventListener('click', function(tuEvento) {
 
 //Obtener el contenido de un elemento (REGISTRARSE)
 //guardamos la referencia del elemento con el que queremos trabajar
-console.clear();
 const nombres = document.querySelector('#nombres');
 nombres.addEventListener('change', function() {
     console.log("Escribiendo...");
@@ -40,7 +39,6 @@ nombres.addEventListener('input', function(evento) {
 
 //Obtener el contenido de un elemento (INICIAR SESION)
 //guardamos la referencia del elemento con el que queremos trabajar
-console.clear();
 const email = document.querySelector('#email');
 email.addEventListener('change', function() {
     console.log("Escribiendo...");
