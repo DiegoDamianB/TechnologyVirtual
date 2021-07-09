@@ -13,36 +13,18 @@ function leerTexto(evento) {
     console.table(camposRegistro);
 }
 
-function mostrarError(mensaje) {
-    //Creo el elemento donde se coloca el mensaje de error para que el usuario lo vea
-    const error = document.createElement('p');
-    //Agrego el mensaje en el elemento
-    error.textContent = mensaje;
-    //Agregamos una clase para luego darle estilo desde nuestro css
-    error.classList.add('mensajeErrorSegundo');
-    //Agrego el bloque a mi html al final del formulario
-    registro.appendChild(error);
-
-    //Quitamos el mensaje de error luego de 5 segundos
+function mostrarMensajes(mensaje, banderas) {
+    const bloquess = document.createElement('p');
+    bloquess.textContent = mensaje;
+    if (banderas === 'Correcto') {
+        bloquess.classList.add('mensajeOkk');
+    } else {
+        bloquess.classList.add('mensajeErrorSegundo');
+    }
+    registro.appendChild(bloquess);
     setTimeout(function() {
-        error.remove();
-    }, 3000);
-}
-
-function mostrarMensaje(mensaje) {
-    //Creo el elemento donde se coloca el mensaje de error para que el usuario lo vea
-    const messageOk = document.createElement('p');
-    //Agrego el mensaje en el elemento
-    messageOk.textContent = mensaje;
-    //Agregamos una clase para luego darle estilo desde nuestro css
-    messageOk.classList.add('mensajeOkSegundo');
-    //Agrego el bloque a mi html al final del formulario
-    registro.appendChild(messageOk);
-
-    //Quitamos el mensaje de error luego de 5 segundos
-    setTimeout(function() {
-        messageOk.remove();
-    }, 3000);
+        bloquess.remove();
+    }, 2000);
 }
 
 function validarRegistro(evento) {
@@ -50,11 +32,10 @@ function validarRegistro(evento) {
     //Accedemos a los valores del objeto con camposIniciarSesion.email, camposIniciarSesion.pw
     //Validamos que los campos no esten en blanco
     if (camposRegistro.nombre === '' || camposRegistro.correo === '' || camposRegistro.user === '' || camposRegistro.passw === '') {
-        mostrarError('*Todos los campos son obligatorios');
-        //Luego de esto no deberia continuar, entonces salgo de la funcion
+        mostrarMensajes('*Todos los campos son obligatorios.', 'Errorr');
         return;
     }
-    mostrarMensaje('Enviando registro');
+    mostrarMensajes('Enviando información de registro.', 'Correcto');
 }
 
 
@@ -91,35 +72,19 @@ function leerTexto(evento) {
     console.table(camposIniciarSesion);
 }
 
-function mostrarMensajeError(mensaje) {
-    //Creo el elemento donde se coloca el mensaje de error para que el usuario lo vea
-    const bloqueError = document.createElement('p');
-    //Agrego el mensaje en el elemento
-    bloqueError.textContent = mensaje;
-    //Agregamos una clase para luego darle estilo desde nuestro css
-    bloqueError.classList.add('mensajeError');
-    //Agrego el bloque a mi html al final del formulario
-    login.appendChild(bloqueError);
-
-    //Quitamos el mensaje de error luego de 5 segundos
+//2da forma
+function mostrarMensaje(mensaje, bandera) {
+    const bloques = document.createElement('p');
+    bloques.textContent = mensaje;
+    //Dependiendo de la condicional se mostrara con la clase error u ok
+    if (bandera === 'Ok') {
+        bloques.classList.add('mensajeOk');
+    } else {
+        bloques.classList.add('mensajeError');
+    }
+    login.appendChild(bloques);
     setTimeout(function() {
-        bloqueError.remove();
-    }, 3000);
-}
-
-function mostrarMensajeOk(mensaje) {
-    //Creo el elemento donde se coloca el mensaje para que el usuario lo vea
-    const bloqueOk = document.createElement('p');
-    //Agrego el mensaje en el elemento
-    bloqueOk.textContent = mensaje;
-    //Agregamos una clase para luego darle estilo desde nuestro css
-    bloqueOk.classList.add('mensajeOk');
-    //Agrego el bloque a mi html al final del formulario
-    login.appendChild(bloqueOk);
-
-    //Quitamos el mensaje de error luego de 5 segundos
-    setTimeout(function() {
-        bloqueOk.remove();
+        bloques.remove();
     }, 3000);
 }
 
@@ -128,11 +93,11 @@ function validarLogin(evento) {
     //Accedemos a los valores del objeto con camposIniciarSesion.email, camposIniciarSesion.pw
     //Validamos que los campos no esten en blanco
     if (camposIniciarSesion.email === '' || camposIniciarSesion.pw === '') {
-        mostrarMensajeError('*Todos los campos son obligatorios');
+        mostrarMensaje('*Todos los campos son obligatorios', 'Error');
         //Luego de esto no deberia continuar, entonces salgo de la funcion
         return;
     }
-    mostrarMensajeOk('Iniciando sesión.');
+    mostrarMensaje('Iniciando sesión.', 'Ok');
 }
 
 //Obtenemos la referencia de todos los elementos de Iniciar Sesion que deseamos validar
