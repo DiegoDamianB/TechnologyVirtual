@@ -5,7 +5,7 @@ function activarDarkMode() {
     const mainContenedor = document.querySelector('main.contenedor'); //Referencia a un <main class='contenedor'>...</main>
 
     fondoWeb.classList.toggle('dark-mode');
-    mainContenedor.classList.toggle('dark-mode');
+    //mainContenedor.classList.toggle('dark-mode');
 }
 
 //Referencia al elemento
