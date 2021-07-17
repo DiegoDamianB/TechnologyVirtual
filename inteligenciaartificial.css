@@ -140,24 +140,34 @@ header .send {
     margin-top: 100px;
 }
 
-.IoT {
+.IA2{
+    width: 100% ;
+    float: none;
+    margin: 0.5em;
+}
+.IA4 {
     width: 58%;
     float: right;
     margin: 0.5em;
 }
 
-.IoT2 {
+.IA5 {
     width: 100%;
     float: none;
     margin: 0.5em;
 }
 
-.IoT3 {
+.IA6 {
     width: 100%;
     float: none;
     margin: 0.5em;
 }
 
+.IA7{
+    width: 100%;
+    float: none;
+    margin: 0.5em;
+}
 .contenido h1 {
     color: #12203E;
     margin: 10px;
@@ -228,7 +238,7 @@ ul li b {
 }
 
 
-/****PIE DE PAGINA****/
+/*PIE DE PAGINA*/
 
 .contenedor .footer {
     background: #12203E;
@@ -272,7 +282,7 @@ ul li b {
 }
 
 
-/******FIN DE PIE DE PAGINA****/
+/***FIN DE PIE DE PAGINA*/
 
 @media screen and (max-width: 768px) {
     .contenedor {
@@ -281,7 +291,7 @@ ul li b {
 }
 
 
-/**darkmode***/
+/*darkmode**/
 
 .dark-mode {
     background: black;
@@ -298,4 +308,4 @@ ul li b {
 }
 
 
-/**fin darkmode**/
+/*fin darkmode*/
