@@ -5,7 +5,7 @@
 }
 
 body {
-    background: url(imagenes/imagen.jpg);
+    background: url(imagenes/fondo.jpg);
     background-size: cover;
     background-attachment: fixed;
     color: #000;
